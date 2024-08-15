@@ -961,7 +961,7 @@ def waveform_compare_plot(event_records,antA,antB,h):
     #h is the filter to use
 
     chosenrecordA=find_antenna(event_records,antA)
-    rawdataA=chosenrecordA['data'].astype(np.single)
+    #rawdataA=chosenrecordA['data'].astype(np.single)
     filteredvoltagesA=signal.convolve(rawdataA,h,mode='valid')
     analyticA=signal.hilbert(filteredvoltagesA)
     envelopeA=np.abs(analyticA)
